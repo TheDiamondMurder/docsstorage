@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Lost</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 213, 79, 0.2), transparent 26rem),
+        radial-gradient(circle at 80% 10%, rgba(38, 166, 154, 0.22), transparent 24rem),
+        linear-gradient(135deg, #171717, #262626 55%, #111827);
+      color: #f8fafc;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 2rem;
+    }
+
+    main {
+      width: min(100%, 760px);
+      text-align: center;
+    }
+
+    .meme {
+      position: relative;
+      display: inline-grid;
+      place-items: center;
+      width: min(72vw, 330px);
+      aspect-ratio: 1;
+      margin-bottom: 2rem;
+      border: 4px solid #f8fafc;
+      border-radius: 8px;
+      background: #facc15;
+      box-shadow: 16px 16px 0 #000;
+      transform: rotate(-2deg);
+    }
+
+    .meme::before,
+    .meme::after {
+      content: "";
+      position: absolute;
+      top: 28%;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #111827;
+      box-shadow: inset 16px 12px 0 #fff;
+    }
+
+    .meme::before {
+      left: 24%;
+    }
+
+    .meme::after {
+      right: 24%;
+    }
+
+    .mouth {
+      position: absolute;
+      bottom: 24%;
+      width: 136px;
+      height: 56px;
+      border: 8px solid #111827;
+      border-top: 0;
+      border-radius: 0 0 90px 90px;
+    }
+
+    .sign {
+      position: absolute;
+      left: 50%;
+      bottom: -20px;
+      width: 78%;
+      padding: 0.7rem 1rem;
+      background: #fff;
+      color: #111827;
+      border: 4px solid #111827;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transform: translateX(-50%) rotate(3deg);
+      box-shadow: 8px 8px 0 #111827;
+    }
+
+    h1 {
+      font-size: clamp(4.5rem, 18vw, 9rem);
+      line-height: 0.9;
+      margin-bottom: 1rem;
+      text-shadow: 6px 6px 0 #000;
+    }
+
+    p {
+      max-width: 38rem;
+      margin: 0 auto 1.75rem;
+      color: #d1d5db;
+      font-size: clamp(1.1rem, 3vw, 1.35rem);
+      line-height: 1.5;
+    }
+
+    .punchline {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.9rem 1.25rem;
+      background: #22c55e;
+      color: #052e16;
+      border: 3px solid #052e16;
+      border-radius: 8px;
+      box-shadow: 6px 6px 0 #052e16;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      transform: translate(3px, 3px);
+      box-shadow: 3px 3px 0 #052e16;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1.25rem;
+      }
+
+      .meme {
+        box-shadow: 10px 10px 0 #000;
+      }
+
+      .sign {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meme" aria-hidden="true">
+      <div class="mouth"></div>
+      <div class="sign">page not found</div>
+    </div>
+
+    <h1>404</h1>
+    <p>
+      dont know what your looking for mate
+      <span class="punchline">slater aint here</span>
+    </p>
+    <a href="/">Take me home</a>
+  </main>
+</body>
+</html>
